@@ -3,10 +3,10 @@ import React from 'react';
 import MenuItem from '../menu-item/menuitem.component'
 import './directory.styles.scss'
 
-class Directory extends React.component {
-	constructor(){
+class Directory extends React.Component {
+	constructor() {
 		super();
-		this.state =  { sections: [
+		this.state = { sections: [
 		  {
 		    title: 'hats',
 		    imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
