@@ -13,17 +13,17 @@ class SignIn extends React.Component {
 	}
 
 	handleSubmit = event => (
-		event.preventDefault();
+		event.preventDefault(),
 		this.setState({name:'',email:''})
 	);
 
-	handleChange = event => (
+	handleChange = event => {
 		const {name, value} = event.target;
 		this.setState({[name]:value});
-	)
+	}
 
 	render(){
-		return {
+		return (
 			<div className='signin'>
 				<h1>I already have an account</h1>
 				<span>signin with your email and password</span>
@@ -35,7 +35,7 @@ class SignIn extends React.Component {
 					<input type='submit' value='Submit Form'/>
 				</form>
 			</div>
-		}
+		)
 	}
 }
 
