@@ -28,10 +28,8 @@ class SignIn extends React.Component {
 				<h1>I already have an account</h1>
 				<span>signin with your email and password</span>
 				<form onSubmit={this.handleSubmit}>
-					<input onChange={this.handleChange} name='email' type='email' value={this.state.email} required/>
-					<label>Email</label>
-					<input onChange={this.handleChange} name='password' type='password' value={this.state.password} required/>
-					<label>Password</label>
+					<input onChange={this.handleChange} label='Email' name='email' type='email' value={this.state.email} required/>
+					<input onChange={this.handleChange} label='password' name='password' type='password' value={this.state.password} required/>
 					<input type='submit' value='Submit Form'/>
 				</form>
 			</div>
