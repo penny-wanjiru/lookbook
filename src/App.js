@@ -11,7 +11,7 @@ import Header from './components/header/header.component';
 import {auth} from '.firebase'
 
 class App extends from React.Component {
-	render (
+	render (){
 	  return (
 	    <div className="App">
 				<Header/>
@@ -22,6 +22,7 @@ class App extends from React.Component {
 				</Switch>
 	    </div>
 	  );
-)
+	)
+}
 }
 export default App;
