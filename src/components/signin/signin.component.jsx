@@ -34,7 +34,7 @@ class SignIn extends React.Component {
 					<Form label='Email' handleChange={this.handleChange} name='email' type='email' value={this.state.email} required/>
 					<Form label='password' name='password' type='password' value={this.state.password} required/>
 					<CustomButton type='submit'>Sign In</CustomButton>
-					<CustomButton onClick={signInWithGoogle}>Sign in with Google</CustomButton>
+					<CustomButton onClick={signInWithGoogle} googleSignin >Sign in with Google</CustomButton>
 				</form>
 			</div>
 		)
