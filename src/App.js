@@ -8,9 +8,10 @@ import HomePage from './pages/components/homepage/homepage.component';
 import ShopPage from './pages/components/shop/shop.component';
 import SigninAndSignup from './pages/components/signin-and-signup/signin-and-signup.component';
 import Header from './components/header/header.component';
-import {auth} from '.firebase'
+import {auth} from './firebase/firebase.utils'
 
 class App extends React.Component {
+
 	render (){
 	  return (
 	    <div className="App">
@@ -22,7 +23,7 @@ class App extends React.Component {
 				</Switch>
 	    </div>
 	  );
-	)
 	}
 }
+
 export default App;
