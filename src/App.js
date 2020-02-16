@@ -10,7 +10,7 @@ import SigninAndSignup from './pages/components/signin-and-signup/signin-and-sig
 import Header from './components/header/header.component';
 import {auth} from '.firebase'
 
-class App extends from React.Component {
+class App extends React.Component {
 	render (){
 	  return (
 	    <div className="App">
@@ -23,6 +23,6 @@ class App extends from React.Component {
 	    </div>
 	  );
 	)
-}
+	}
 }
 export default App;
