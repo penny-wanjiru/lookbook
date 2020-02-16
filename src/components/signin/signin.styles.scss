@@ -1,3 +1,12 @@
 .signin {
 	width:30vw;
 }
+
+*{
+	box-sizing: border-box;
+}
+
+.buttons{
+	display: flex;
+	justify-content: space-between;
+}
