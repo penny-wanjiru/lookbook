@@ -17,19 +17,17 @@ class App extends React.Component {
 		this.state = {currentUser:null};
 	}
 
-	unsubscibeFromAuth = null;
+	unsubscribeFromAuth = null;
 
 	componentDidMount(){
-		this.unsubscibeFromAuth=auth.onAuthStateChanged(user=>{
+		this.unsubscribeFromAuth=auth.onAuthStateChanged(user=>{
 		this.setState({currentUser:user});
 	})
 	}
 
 	componentWillUnmount(){
-		this.unsubscibeFromAuth();
+		this.unsubscribeFromAuth();
 	}
-
-
 
 	render (){
 	  return (
