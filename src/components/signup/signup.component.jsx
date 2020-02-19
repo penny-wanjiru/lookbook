@@ -9,6 +9,7 @@ import './signup.styles.scss';
 
 
 class SignUp extends React.Component {
+	const {displayName, email, password, confirmPassword} = this.state
 	constructor(){
 		super();
 		this.state = {
@@ -23,7 +24,12 @@ class SignUp extends React.Component {
 			<div className='sign-up'>
 				<h2 className='title'> I don't have an account</h3>
 				<span> Sign up with your email and password</span>
-
+				<form className='sign-up-form' onSubmit={this.handleSubmit}>
+					<FormInput type='text' name='displayName' value={displayName} onChange={this.handleChange}/>
+					<FormInput type='email' name='email' value={email} onChange={this.handleChange} label='Email' required/>
+					<FormInput type='password' name='password' value={password} onChange={this.handleChange}required/>
+					<FormInput type='password' name='confirmPassword' value={confirmPassword} onChange={this.handleChange}required/>
+				</form>
 			</div>
 
 	}
