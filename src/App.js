@@ -2,20 +2,18 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import HomePage from './pages/components/homepage/homepage.component';
 import ShopPage from './pages/components/shop/shop.component';
 import SigninAndSignup from './pages/components/signin-and-signup/signin-and-signup.component';
 import Header from './components/header/header.component';
 import {auth, createUserProfileDocument} from './firebase/firebase.utils'
+import {setCurrentUser} from '.redux/user/user.actions';
 
 class App extends React.Component {
 
-	constructor(){
-		super();
-		this.state = {currentUser:null};
-	}
 
 	unsubscribeFromAuth = null;
 
@@ -55,4 +53,8 @@ class App extends React.Component {
 	}
 }
 
-export default App;
+const mapDispatchToProps = dispatch => ({
+	setCurrentUser: user => dispatch(user)
+});
+
+export default connect(null, mapDispatchToProps)(App);
